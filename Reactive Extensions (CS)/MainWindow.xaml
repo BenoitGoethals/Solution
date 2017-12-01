@@ -1,0 +1,24 @@
+﻿<Window x:Class="Reactive_Extensions__CS_.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Reactive_Extensions__CS_"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="inputBox" TextWrapping="Wrap" Text="" Margin="5"/>
+        <ListBox x:Name="wordsBox" Grid.Row="1" Margin="5"/>
+
+        <TextBox x:Name="resultBox" Grid.Column="1" Grid.Row="1" Margin="5" ScrollViewer.VerticalScrollBarVisibility="Visible" />
+
+    </Grid>
+</Window>
