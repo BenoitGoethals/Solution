@@ -1,6 +1,7 @@
 ﻿using Reactive_Extensions__CS_.DictionaryService;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Reactive.Linq;
 using System.Text;
@@ -62,6 +63,7 @@ namespace Reactive_Extensions__CS_
                          select s)
                          .Throttle(TimeSpan.FromSeconds(0.5)).DistinctUntilChanged();
 
+            Debug.Write("");
 
             var result = from term in input
                          from w in ServiceCall(term).TakeUntil(input)
